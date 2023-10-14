@@ -33,6 +33,7 @@ const ConversationPage = () => {
   const isLoading = form.formState.isSubmitting;
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      //need to change values to specific openAI schema and pass to axio
       const userMessage: ChatCompletionMessage = {
         role: "user",
         content: values.prompt,
